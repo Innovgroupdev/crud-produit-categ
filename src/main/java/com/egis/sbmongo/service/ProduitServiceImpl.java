@@ -13,7 +13,7 @@ public class ProduitServiceImpl {
 
     @Autowired
     private ProduitRepository produitRepository;
-
+    @Override
     public Produit saveProduit(Produit p) {
         return produitRepository.save(p);
     }
@@ -34,6 +34,5 @@ public class ProduitServiceImpl {
         if(data.isPresent()){
             produitRepository.deleteById(id);
         }
-
     }
 }
